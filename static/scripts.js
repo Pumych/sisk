@@ -13,13 +13,15 @@ function writeRandomString(){
 
 $(document).ready(function(){
     var output = '';
+    var addClass = '';
     for(var i=0; i<30; i++){
-        output += '<div class="pinItem">' + writeRandomString() + '</div>';
+        if (i==17) addClass="w2";
+        else addClass='';
+        output += '<div class="pinItem '+addClass+'">' + writeRandomString() + '</div>';
 
     }
+
     $('.main').html(output);
-
-
 
     var $container = $('.main');
     // initialize
@@ -33,13 +35,11 @@ $(document).ready(function(){
     var html = '';
     for(var i=0; i<10; i++){
         html += '<div class="pinItem newAdded">' + writeRandomString() + '</div>';
-
     }
 
     var html = $(html);
 
     $($container).append( html ).masonry( 'appended', html, true );
-//    $($container).masonry( 'reload' );
 
 });
 
