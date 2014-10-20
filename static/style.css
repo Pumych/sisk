@@ -1,0 +1,21 @@
+.pinItem{
+    width: 17%;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 4px;
+}
+
+.pinItem.newAdded{
+    border: 1px solid red;
+}
+
+.pinItem.w2 { width: 34%; }
+
+.main {
+    width: 1400px;
+    margin: auto;
+}
+
