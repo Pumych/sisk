@@ -14,8 +14,17 @@ var MainSchema = mongoose.Schema({
 
 //var MainModel = mongoose.model('sisk', MainSchema);
 
-MainSchema.statics.getPosts = function(){
-    return this.model('sisk').find({});
+MainSchema.statics.getPosts = function(req, res){
+    this.model('post').find({}, function(err, data){
+        if(err) console.log(err);
+        console.log(data);
+        res.end();
+    });
 }
 
-module.exports = mongoose.model('sisk', MainSchema);
+module.exports = mongoose.model('post', MainSchema);
+
+/**
+ * DB: sisk->posts
+ *
+ */

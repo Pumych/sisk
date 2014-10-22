@@ -14,7 +14,7 @@ module.exports = function(app,  router){
 
     router.get('/get_posts', function(req, res){
 
-        console.log('>>> ', db.getPosts());
+        db.getPosts(req, res);
 
     });
 
