@@ -1,4 +1,5 @@
-var db          = require('./models/db.js');
+var posts          = require('./model/posts.js');
+var users          = require('./model/users.js');
 
 module.exports = function(app,  router){
 
@@ -13,9 +14,15 @@ module.exports = function(app,  router){
     /****************************** AJAX front-end Requests **********/
 
     router.get('/get_posts', function(req, res){
+        posts.getPosts(req, res);
+    });
 
-        db.getPosts(req, res);
+    router.get('/add_post', function(req, res){
+        posts.addPost(req, res);
+    });
 
+    router.get('/add_user', function(req, res){
+        users.addUser(req, res);
     });
 
     /**This would be the last router, if no page/file found return 404 */
