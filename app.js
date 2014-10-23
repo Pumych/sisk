@@ -18,7 +18,7 @@ app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
-require('./routes.js')(app,  router, express); // load our routes and pass in our app and fully configured passport
+require('./routes.js')(app,  router); // load our routes and pass in our app and fully configured passport
 
 app.listen(port);
 console.log( 'Run on port ' + port);

@@ -1,7 +1,7 @@
 var mongoose = require('../model/mongoose.js');
 
 var Schema = mongoose.Schema({
-    img_url:    String,
+    video_url:    String,
     title:      String,
     content:    String
 });
@@ -18,7 +18,7 @@ Schema.statics.getPosts = function(req, res){
 Schema.statics.addPost = function(req, res){
     var Post = this;
     var newPost = new Post({
-        img_url:    'bbbbbbbbb',
+        video_url:  'bbbbbbbbb',
         title:      'LargeB',
         content:    'Just a large B'
     });

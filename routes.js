@@ -3,12 +3,16 @@ var users          = require('./model/users.js');
 
 module.exports = function(app,  router){
 
-    /****************************** Page Requests ***************************/
+    /****************************** GET ***************************/
         // Home page (registration/login form)
     router.get('/', function(req, res){
         res.render('main.html', {
             title: "Home page"
         });
+    });
+
+    router.get('/add_post', function(req, res){
+        res.render('add_post.html');
     });
 
     /****************************** AJAX front-end Requests **********/

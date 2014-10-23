@@ -19,3 +19,13 @@
     margin: auto;
 }
 
+
+
+
+body.add_post section.add_post{
+    float: left;
+}
+
+body.add_post section.preview{
+    float: left;
+}
