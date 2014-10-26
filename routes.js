@@ -17,17 +17,10 @@ module.exports = function(app,  router){
 
     /****************************** AJAX front-end Requests **********/
 
-    router.get('/get_posts', function(req, res){
-        posts.getPosts(req, res);
-    });
-
-    router.get('/add_post', function(req, res){
+    router.post('/add_post', function(req, res){
         posts.addPost(req, res);
     });
 
-    router.get('/add_user', function(req, res){
-        users.addUser(req, res);
-    });
 
     /**This would be the last router, if no page/file found return 404 */
     router.get('*', function(req, res){

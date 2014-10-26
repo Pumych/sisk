@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Sisk | {% block title %}Default title{% endblock %}</title>
-
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script src="scripts/jquery-2.1.1.js"></script>
+    <script src="scripts/scripts.js"></script>
 </head>
-<body class="{% block body_class %}{% endblock %}">
+<body id="{% block body_id %}{% endblock %}">
     {% block content %}{% endblock %}
 </body>
 </html>
